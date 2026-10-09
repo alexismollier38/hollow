@@ -10,3 +10,11 @@ const setMenu = (open) => {
 toggle.addEventListener('click', () => setMenu(!panel.classList.contains('open')));
 close.addEventListener('click', () => setMenu(false));
 document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenu(false); });
+
+const footer = document.querySelector('.site-footer');
+if (footer && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const footerObserver = new IntersectionObserver(([entry]) => {
+    footer.classList.toggle('is-visible', entry.isIntersecting);
+  }, { threshold: 0.12 });
+  footerObserver.observe(footer);
+}
