@@ -1,14 +1,12 @@
 const toggle = document.querySelector('.menu-toggle');
-const nav = document.querySelector('.site-nav');
-toggle?.addEventListener('click', () => {
-  const open = nav.classList.toggle('open');
+const panel = document.querySelector('.menu-panel');
+const close = document.querySelector('.menu-close');
+const setMenu = (open) => {
+  toggle.classList.toggle('active', open);
   toggle.setAttribute('aria-expanded', String(open));
-});
-document.querySelectorAll('.site-nav a').forEach((link) => link.addEventListener('click', () => {
-  nav.classList.remove('open');
-  toggle?.setAttribute('aria-expanded', 'false');
-}));
-const observer = new IntersectionObserver((entries) => entries.forEach((entry) => {
-  if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
-}), { threshold: 0.12 });
-document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+  panel.classList.toggle('open', open);
+  panel.setAttribute('aria-hidden', String(!open));
+};
+toggle.addEventListener('click', () => setMenu(!panel.classList.contains('open')));
+close.addEventListener('click', () => setMenu(false));
+document.addEventListener('keydown', (event) => { if (event.key === 'Escape') setMenu(false); });

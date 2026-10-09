@@ -3,80 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#080708" />
-    <meta name="description" content="HOLLOW — un univers RP rouge et noir, élégant, intense et vivant." />
-    <title>HOLLOW — Entrez dans la faille</title>
-    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23080708'/%3E%3Cpath d='M32 51C8 35 12 15 26 20c3 1 5 4 6 7 1-3 3-6 6-7 14-5 18 15-6 31Z' fill='none' stroke='%23ee2438' stroke-width='4'/%3E%3C/svg%3E" />
+    <meta name="theme-color" content="#080808" />
+    <title>Hollow RP</title>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23080808'/%3E%3Cpath d='M16 20h32v7H23v7h18v7H23v7h25v7H16z' fill='%23fff'/%3E%3C/svg%3E" />
     <link rel="stylesheet" href="src/styles.css" />
   </head>
   <body>
-    <div class="noise" aria-hidden="true"></div>
+    <div class="grid" aria-hidden="true"></div>
     <header class="site-header">
-      <a class="wordmark" href="#top" aria-label="Hollow, accueil">
-        <span class="wordmark-mark">H</span><span>HOLLOW</span>
-      </a>
-      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu <span>☰</span></button>
-      <nav id="site-nav" class="site-nav" aria-label="Navigation principale">
-        <a href="#univers">L’univers</a>
-        <a href="#factions">Factions</a>
-        <a href="#regles">Le serveur</a>
-        <a class="nav-discord" href="#rejoindre">Nous rejoindre</a>
-      </nav>
+      <a class="brand" href="/" aria-label="Hollow RP">HOLLOW <span>RP</span></a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu-panel" aria-label="Ouvrir le menu">
+        <i></i><i></i><i></i>
+      </button>
     </header>
-
-    <main id="top">
-      <section class="hero">
-        <div class="hero-backdrop" aria-hidden="true"></div>
-        <div class="hero-copy reveal">
-          <p class="eyebrow"><span class="eyebrow-line"></span> Serveur roleplay français <span class="eyebrow-line"></span></p>
-          <img class="hero-logo" src="public/hollow-logo.png" alt="Hollow" />
-          <h1>Tout ce que vous<br /><em>cachez</em> vous définit.</h1>
-          <p class="hero-intro">Une ville à la lumière crue, des alliances fragiles et des histoires qui refusent de mourir. Trouvez votre place dans la faille.</p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#rejoindre">Entrer dans Hollow</a>
-            <a class="button button-ghost" href="#univers">Découvrir l’univers</a>
-          </div>
-        </div>
-        <div class="hero-orbit orbit-one" aria-hidden="true"></div>
-        <div class="hero-orbit orbit-two" aria-hidden="true"></div>
-        <div class="hero-scroll"><span></span> Faites défiler</div>
-      </section>
-
-      <section id="univers" class="section intro-grid">
-        <div class="section-label reveal"><span>01</span><i></i><span>L’univers</span></div>
-        <div class="intro-content reveal">
-          <p class="kicker">La ville n’oublie rien</p>
-          <h2>Une histoire s’écrit<br /><em>dans les interstices.</em></h2>
-          <p class="body-copy">Hollow est un serveur RP pensé pour celles et ceux qui aiment les personnages nuancés, les choix lourds de conséquences et les rencontres qui changent une vie. Ici, chaque rue a une mémoire.</p>
-          <a class="text-link" href="#rejoindre">Lire le dossier de la ville <span>↗</span></a>
-        </div>
-        <div class="intro-visual reveal"><img src="public/hollow-emblem.png" alt="Emblème lumineux rouge de Hollow" /></div>
-      </section>
-
-      <section id="factions" class="section factions-section">
-        <div class="section-heading reveal"><div class="section-label"><span>02</span><i></i><span>Choisissez votre camp</span></div><h2>Deux visages.<br /><em>Une même ville.</em></h2></div>
-        <div class="faction-cards">
-          <article class="faction-card faction-red reveal"><div class="card-number">01</div><div><p class="kicker">Le cœur ouvert</p><h3>Les Lucioles</h3><p>Celles et ceux qui refusent de laisser la ville s’éteindre. Réseaux d’entraide, commerces de quartier et secrets bien gardés.</p><a class="text-link" href="#rejoindre">Explorer la faction <span>↗</span></a></div></article>
-          <article class="faction-card faction-dark reveal"><div class="card-number">02</div><div><p class="kicker">Le poing fermé</p><h3>Les Veilleurs</h3><p>Ils connaissent les raccourcis, les dettes et les règles qui ne figurent sur aucun papier. Leur influence s’étend dans l’ombre.</p><a class="text-link" href="#rejoindre">Explorer la faction <span>↗</span></a></div></article>
-        </div>
-      </section>
-
-      <section id="regles" class="section manifesto-section">
-        <div class="manifesto-copy reveal"><p class="kicker">Hollow, c’est</p><h2>Plus qu’un serveur.<br /><em>Un rôle à jouer.</em></h2></div>
-        <div class="manifesto-list">
-          <div class="manifesto-item reveal"><span>01</span><div><h3>Des histoires organiques</h3><p>Pas de scénario imposé : vos décisions font bouger la ville.</p></div></div>
-          <div class="manifesto-item reveal"><span>02</span><div><h3>Une communauté exigeante</h3><p>Du jeu sérieux, bienveillant et toujours au service du personnage.</p></div></div>
-          <div class="manifesto-item reveal"><span>03</span><div><h3>Un monde en mouvement</h3><p>Événements, saisons et intrigues pour ne jamais jouer la même journée.</p></div></div>
-        </div>
-      </section>
-
-      <section id="rejoindre" class="join-section">
-        <div class="join-glow" aria-hidden="true"></div>
-        <div class="join-content reveal"><p class="eyebrow"><span class="eyebrow-line"></span> Le prochain chapitre commence ici</p><h2>La ville vous<br /><em>attend.</em></h2><p>Présentez votre personnage, trouvez votre cercle et écrivez quelque chose dont on parlera demain.</p><a class="button button-primary" href="https://discord.com" target="_blank" rel="noreferrer">Rejoindre le Discord</a></div>
-      </section>
-    </main>
-
-    <footer class="site-footer"><div class="footer-brand"><span class="wordmark-mark">H</span><span>HOLLOW</span></div><p>© 2026 Hollow RP. Tous droits réservés.</p><div class="footer-links"><a href="#regles">Règlement</a><a href="#rejoindre">Discord</a><a href="#top">Retour en haut ↑</a></div></footer>
+    <main><img class="logo" src="public/hollow-logo.png" alt="Hollow" /></main>
+    <aside id="menu-panel" class="menu-panel" aria-hidden="true">
+      <button class="menu-close" type="button" aria-label="Fermer le menu">×</button>
+      <nav aria-label="Menu">
+        <a href="https://discord.com" target="_blank" rel="noreferrer">Discord</a>
+        <a href="#" class="menu-disabled">Le règlement <small>Bientôt</small></a>
+      </nav>
+    </aside>
     <script src="src/main.js"></script>
   </body>
 </html>
