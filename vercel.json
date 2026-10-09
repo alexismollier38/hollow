@@ -1,5 +1,6 @@
 {
   "version": 2,
+  "outputDirectory": "dist",
   "rewrites": [
     { "source": "/(.*\\.(?:css|js|png|svg|ico|jpg|jpeg|webp|woff2?))", "destination": "/dist/$1" },
     { "source": "/(.*)", "destination": "/dist/index.html" }
